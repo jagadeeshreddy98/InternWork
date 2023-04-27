@@ -1,0 +1,217 @@
+﻿@model EntityLayer.EmployeeModel
+
+@{
+    ViewData["Title"] = "DisplayByEmpId";
+}
+
+<h1>Display By EmployeeId</h1>
+
+
+
+<table class="table" width="1000">
+    <thead>
+        @*<tr style="color:orangered">*@
+        <tr style="background-color: aqua; color: orangered ">
+            <th style="color:orangered">
+                @Html.DisplayNameFor(model => model.EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pincode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoleId)
+            </th>
+            <th></th>
+        </tr>
+        @*</tr>*@
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.EmployeeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Last_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Pincode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Mobile_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.RoleId)
+            </td>
+            <td>
+            <td>
+                @Html.ActionLink("Edit", "EditEmployee", new { id = Model.EmployeeId })
+            </td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+<!--<table class="table" width="1000">
+    <thead>
+        <tr style="color:orangered">
+        <tr style="background-color:aqua">
+            <th style="color:orangered">
+                @Html.DisplayNameFor(model => model.EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pincode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+        </tr>
+    </thead>
+    <tbody>-->
+@*@foreach (var item in Model)
+    {*@
+
+<!--<div>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmployeeId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmployeeId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.First_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.First_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Last_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Last_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.State)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pincode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pincode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mobile_Number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mobile_Number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "EditEmployee", new { id = Model.EmployeeId }) |-->
+@*<a asp-action="DisplayAllEmployees">Back to List</a>*@
+<!--</div>
+                }
+</table>-->

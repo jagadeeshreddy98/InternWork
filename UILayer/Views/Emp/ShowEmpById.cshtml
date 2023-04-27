@@ -1,0 +1,86 @@
+﻿@model EntityLayer.EmployeeModel
+
+@{
+    ViewData["Title"] = "ShowEmpById";
+}
+
+<h1>Display Employe ById</h1>
+
+<table class="table" width="1000">
+    <thead>
+        @*<tr style="color:orangered">*@
+        <tr style="background-color: aqua; color: orangered ">
+            <th style="color:orangered">
+                @Html.DisplayNameFor(model => model.EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pincode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+        @*</tr>*@
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.EmployeeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Last_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Pincode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Mobile_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Email)
+            </td>
+            <td>
+                <td>
+                    @Html.ActionLink("Edit", "UpdateEmp", new { id = Model.EmployeeId })
+                </td>
+            </td>
+        </tr>
+    </tbody>
+</table>

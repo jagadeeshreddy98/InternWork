@@ -1,0 +1,109 @@
+﻿@model IEnumerable<EntityLayer.EmployeeModel>
+
+@{
+    ViewData["Title"] = "DisplayAllEmployees";
+}
+
+<h1>Employee Details</h1>
+<form method="get" asp-action="DisplayAllEmployees">
+    <p>
+        <input type="search" placeholder="Enter Employee Name Or Email..." value="@ViewData["DisplayAllEmployees"]" name="Empsearch" style="width:500px; height:25px;" />
+        <input type="submit" value="Search" class="btn btn-primary" />
+        <a asp-action="DisplayAllEmployees">Get All Employees</a>
+    </p>
+
+
+
+</form>
+<p>
+    <a asp-action="AddEmployee">Create New</a>
+</p>
+<table class="table" width="1000">
+    <thead>
+        <tr style="color:orangered" >
+        
+            <th style="color:orangered">
+                @Html.DisplayNameFor(model => model.EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pincode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoleId)
+            </th>
+            <th></th>
+        </tr>
+       
+    </thead>
+  <tbody>
+   @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pincode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleId)
+            </td>
+            
+            <td>
+                @Html.ActionLink("Edit", "EditEmployee", new { id = item.EmployeeId })|
+                @Html.ActionLink("Details", "DisplayByEmpId", new { id = item.EmployeeId })|
+                @Html.ActionLink("Delete", "DeleteEmployee", new { id = item.EmployeeId },
+                new { onclick = "return confirm('Are sure wants to delete?');" });
+            </td>
+            
+        </tr>
+    }
+  </tbody>
+</table>

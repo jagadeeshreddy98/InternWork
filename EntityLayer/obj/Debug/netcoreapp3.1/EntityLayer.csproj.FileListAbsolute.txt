@@ -1,0 +1,9 @@
+C:\Users\JAATLA\source\lab\Employee\EntityLayer\bin\Debug\netcoreapp3.1\EntityLayer.deps.json
+C:\Users\JAATLA\source\lab\Employee\EntityLayer\bin\Debug\netcoreapp3.1\EntityLayer.dll
+C:\Users\JAATLA\source\lab\Employee\EntityLayer\bin\Debug\netcoreapp3.1\EntityLayer.pdb
+C:\Users\JAATLA\source\lab\Employee\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\JAATLA\source\lab\Employee\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.AssemblyInfo.cs
+C:\Users\JAATLA\source\lab\Employee\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\JAATLA\source\lab\Employee\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.dll
+C:\Users\JAATLA\source\lab\Employee\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.pdb
+C:\Users\JAATLA\source\lab\Employee\EntityLayer\obj\Debug\netcoreapp3.1\EntityLayer.csproj.AssemblyReference.cache
